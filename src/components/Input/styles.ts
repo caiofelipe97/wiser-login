@@ -38,14 +38,17 @@ export const Label = styled.Text`
   font-size: 12px;
   color: #383e71;
   margin: 8px;
+  font-family: 'Montserrat-Regular';
 `;
 
 export const TextInput = styled.TextInput`
   flex: 1;
   color: #383e71;
   font-size: 16px;
-  font-family: 'RobotoSlab-Regular';
+  font-family: 'Montserrat-Regular';
 `;
+
+export const ErrorIcon = styled.Image``;
 
 export const ErrorText = styled.Text`
   font-size: 10px;

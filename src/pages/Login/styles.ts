@@ -27,6 +27,7 @@ export const Title = styled.Text`
   color: #383e71;
   font-weight: 400;
   line-height: 48px;
+  font-family: 'Montserrat-Regular';
 `;
 export const SubTitle = styled.Text`
   line-height: 20px;
@@ -35,6 +36,8 @@ export const SubTitle = styled.Text`
   margin-top: 16px;
   margin-bottom: 30px;
   font-weight: 600;
+  font-family: 'Montserrat-SemiBold';
+
 `;
 
 export const ForgotPasswordText = styled.Text`
@@ -46,4 +49,5 @@ export const ForgotPasswordText = styled.Text`
 export const ForgotPasswordClickableText = styled.Text`
   color: #9d25b0;
   text-decoration: underline;
+  font-family: 'Montserrat-Regular';
 `;

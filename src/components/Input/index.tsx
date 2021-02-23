@@ -8,8 +8,9 @@ import React, {
 } from 'react';
 import {TextInputProps} from 'react-native';
 import {useField} from '@unform/core';
+import errorIconImage from '../../assets/x.png';
 
-import {Container, InputContainer, TextInput, Label, ErrorText} from './styles';
+import {Container, InputContainer, TextInput, ErrorIcon, Label, ErrorText} from './styles';
 
 interface InputProps extends TextInputProps {
   name: string;
@@ -83,6 +84,7 @@ const Input: React.RefForwardingComponent<InputRef, InputProps> = (
           }}
           {...rest}
         />
+        {error && <ErrorIcon source={errorIconImage}/>}
       </InputContainer>
       {error && <ErrorText>{error}</ErrorText>}
     </Container>

@@ -19,7 +19,7 @@ export const Button = styled(RectButton)`
 `;
 
 export const ButtonText = styled.Text`
-  font-family: 'RobotoSlab-Medium';
+  font-family: 'Montserrat-SemiBold';
   color: #ffffff;
   font-size: 18px;
   font-weight: 600;

@@ -1,13 +1,17 @@
-import React, {useCallback, useRef} from 'react';
+import React, {useCallback, useEffect, useRef} from 'react';
 import {Alert, KeyboardAvoidingView, TextInput} from 'react-native';
 import {Form} from '@unform/mobile';
 import {FormHandles} from '@unform/core';
 import * as Yup from 'yup';
+import { useDispatch } from 'react-redux';
 
 import loginImage from '../../assets/background.png';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 import getValidationErrors from '../../utils/getValidationErrros';
+import { User } from '../../store/ducks/auth/types';
+import { ApplicationState } from '../../store';
+import * as AuthActions from '../../store/ducks/auth/actions';
 
 import {
   Container,
@@ -28,6 +32,8 @@ interface LoginFormData {
 const Login: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
   const passwordInputRef = useRef<TextInput>(null);
+  const dispatch = useDispatch();
+
   const handleSignIn = useCallback(async (data: LoginFormData) => {
     try {
       formRef.current?.setErrors({});
@@ -42,10 +48,7 @@ const Login: React.FC = () => {
         abortEarly: false,
       });
 
-      Alert.alert('Sucesso', 'Você foi autenticado com sucesso!');
-      /*
-      history.push('/dashboard');
-      */
+      dispatch(AuthActions.loginRequest(data))
     } catch (err) {
       if (err instanceof Yup.ValidationError) {
         const errors = getValidationErrors(err);
