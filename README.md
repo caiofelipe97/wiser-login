@@ -14,7 +14,7 @@
 
 ## Funcionamento
 - O funcionamento do aplicativo é bastante simples, apenas uma tela de login, o usuário digita seu email e senha, caso não digite algum campo é feito uma validação de campo obrigatório, e no caso do email se ele é inválido.
-- Ao passar das validações é realizado uma chamada ataravés do Redux-Saga ao mockAPI, se o usuário existir é disparada a action `LOGIN_SUCCESS` se não é disparada a action `LOGIN_FAILURE`.
+- Ao passar das validações é realizado uma chamada através do Redux-Saga ao mockAPI, se o usuário existir é disparada a action `LOGIN_SUCCESS` se não é disparada a action `LOGIN_FAILURE`.
 - O aplicativo se comporta de acordo com os passos do usuário.
 
 ## Designer responsivo
