@@ -17,3 +17,6 @@
 - Ao passar das validações é realizado uma chamada ataravés do Redux-Saga ao mockAPI, se o usuário existir é disparada a action `LOGIN_SUCCESS` se não é disparada a action `LOGIN_FAILURE`.
 - O aplicativo se comporta de acordo com os passos do usuário.
 
+## Designer responsivo
+![Screenshot_1606435149](https://user-images.githubusercontent.com/20324935/108908973-b4302b80-7602-11eb-9047-8efc04444f83.png)
+![Screenshot_1611003115](https://user-images.githubusercontent.com/20324935/108908975-b5615880-7602-11eb-8e55-266af293645f.png)
